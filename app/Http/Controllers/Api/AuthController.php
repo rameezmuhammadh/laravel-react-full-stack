@@ -12,6 +12,10 @@ class AuthController extends Controller
 {
     public function login(LoginRequest $request){
         
+        
+    }
+    
+    public function signup(SignupRequest $request){
         $data = $request->validated();
         $user =User::create([
             'name' => $data['name'],
@@ -22,9 +26,7 @@ class AuthController extends Controller
       $token =  $user->createToken('main')->plainTextToken;
       return response(compact('user', 'token'));
     }
-    public function signup(SignupRequest $request){
-        
-    }
+
     public function logout(Request $request){
         
     }
