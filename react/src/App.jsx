@@ -1,13 +1,10 @@
 
 function App() {
-  
 
   return (
-
-      <div>
-       App
-       </div>
-
+    <>
+        App
+    </>
   )
 }
 
